@@ -1,10 +1,4 @@
-# Example Resource
-
-![](cover.png)
-
-Short description of the resource
-
-## Licence
+# Licence
 
 Unless otherwise specified, everything in this repository is covered by the following licence:
 
