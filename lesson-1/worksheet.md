@@ -109,7 +109,7 @@ numbers = [i for i in range(0,10,2)]
 
 1. A window should appear with your graph drawn.
 
-![figure_1](images/figure_1.png)
+	![figure_1](images/figure_1.png)
 
 1. Close the window. You can now try drawing some different styles of graph. Alter the line:
 
@@ -134,16 +134,75 @@ then run your code again.
 	plt.scatter(x,y)
 	```
 
-![figure_2](images/figure2.png)
+	![figure_2](images/figure_2.png)
 
 1. Try to alter your `y` list comprehension and the type of graph you're drawing to produce the following three graphs
 
-![figure_3](images/figure3.png)
-![figure_4](images/figure4.png)
-![figure_5](images/figure5.png)
+![figure_3](images/figure_3.png)
 
-## Interactive plotting
+![figure_4](images/figure_4.png)
+
+![figure_5](images/figure_5.png)
+
+## Interactive and random plotting
+
+To finish off this section, you are going to learn how to plot an interactive graph - one that updates as the values change.
+
+1. Create a new file called random_plot.py
+1. This time you'll need a couple of extra libraries. Write the following three lines at the top of your file:
+
+	```python
+	import matplotlib.pyplot as plt
+	from time import sleep
+	from random import shuffle
+	```
+
+1. Next you can tell your program to turn on `interactive plotting`:
+
+	```python
+	plt.ion()
+	```
+
+1. Then choose the `x` and `y` lists.
+
+	```python
+	y = [i for i in range(100)]
+	x = [i for i in range(len(y))]
+	```
+
+1. You're going to use a loop to update the graph and keep shuffling the `y` list around so that the values keep changing. You'll also need to clear the plot each time. The comments in the code below explain each line.
+
+   ```python
+   for i in range(50):       ## Do the following 50 times
+	   plt.clf()             ## Clear the plot
+	   plt.bar(x,y)          ## Plot a bar chart
+	   plt.draw()            ## Draw the bar chart
+	   sleep(0.5)            ## Pause for 1/2 a second
+	   shuffle(y)            ## Shuffle the data
+
+   ```
+
+1. Run your code to see the live plot. If it errors, check it's the same as the code below.
+
+```python
+import matplotlib.pyplot as plt
+from time import sleep
+from random import shuffle
 
 
+plt.ion()
+
+y = [i for i in range(100)]
+x = [i for i in range(len(y))]
+
+for i in range(50):
+    plt.clf()
+    plt.bar(x,y)
+    plt.draw()
+    sleep(0.5)
+    shuffle(y)
+```
+
+![animation](images/anim.gif)
 ...
 
