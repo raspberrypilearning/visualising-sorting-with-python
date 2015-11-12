@@ -74,11 +74,11 @@ numbers = [i for i in range(0,10,2)]
 
 1. To produce a standard graph, you need to use two sets of values. Open up a new Python file and call it `graphing.py`
 
-1. You can start by producing two lists of numbers to graph. It doesn't really matter what numbers they are, but call them `x` and `y`.
+1. You can start by producing two lists of numbers to graph. It doesn't really matter what numbers they are, but they must be the same length. We can acheive this by using the inbuilt `len()` function in Python. Call the lists `y` and `x`.
 
 	```python
-	x = [i for i in range(10)]
 	y = [i for i in range(20,100,3)]
+	x = [i for i in range(len(y))]
 	```
 
 1. Now that you have the numbers, you can create a graph to display them. To do this, you will need to use the matplotlib library. At the top of your file write the following line:
@@ -99,12 +99,51 @@ numbers = [i for i in range(0,10,2)]
 	```python
 	import matplotlib.pyplot as plt
 
-	x = [i for i in range(80)]
 	y = [i for i in range(20,100,3)]
+	x = [i for i in range(len(y))]
+
 
 	plt.scatter(x,y)
 	plt.draw()
 	```
+
+1. A window should appear with your graph drawn.
+
+![figure_1](images/figure_1.png)
+
+1. Close the window. You can now try drawing some different styles of graph. Alter the line:
+
+	```python
+	plt.scatter(x,y)
+	```
+
+so that it reads
+
+	```python
+	plt.plot(x,y)
+	```
+
+then run your code again.
+
+1. You can also try `plt.bar`
+
+2. If you want to have a scatter plot with the points joined up, you can combine `plot` and `scatter`
+
+	```python
+	plt.plot(x,y)
+	plt.scatter(x,y)
+	```
+
+![figure_2](images/figure2.png)
+
+1. Try to alter your `y` list comprehension and the type of graph you're drawing to produce the following three graphs
+
+![figure_3](images/figure3.png)
+![figure_4](images/figure4.png)
+![figure_5](images/figure5.png)
+
+## Interactive plotting
+
 
 ...
 
