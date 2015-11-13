@@ -1,1 +1,4 @@
-- Use two or more programming languages, at least one of which is textual, to solve a variety of computational problems.
+- Recognises that different algorithms exist for the same problem.
+- Understands a recursive solution to aproblem repeatedly applies the same solution to smaller instances of the problem.
+- Understands the notion of performance for algorithms and appreciates that some algorithms have different performance characteristics for the same task.
+- Evaluates the effectiveness of algorithms and models for similar problems.

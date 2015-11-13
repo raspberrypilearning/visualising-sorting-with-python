@@ -1,5 +1,5 @@
-title: Example Resource
+title: Visualising Sorting with Python
 category: teach
 lessons:
-    1: Getting started with Raspberry Pi
-    2: Continuing with Raspberry Pi
+    1: Graphing with Matplotlib
+    2: Bubble Sort

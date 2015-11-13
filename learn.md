@@ -1,7 +1,6 @@
-By creating a something with your Raspberry Pi students will learn:
+By following this scheme of work, your students will learn
 
-- How to set up a Raspberry Pi camera
-- How to use GPIO pins
-- How to create a circuit on a breadboard
-- Controlling GPIO pins with Python code
-- Controlling the camera module with Python code
+- How to graph data with Matplotlib.
+- The implementaion of a variety of sorting algorithms using Python.
+- The mechanics of a variety of sorting algorithms.
+- To compare the performance of a variety of sorting algorithms.
