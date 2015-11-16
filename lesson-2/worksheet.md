@@ -1,6 +1,6 @@
-# Lesson 2 - Bubblesort
+# Lesson 2 - Bubble Sort
 
-The bubblesort algorithm sorts an unordered list by repeatedly stepping through the list and swapping elements if they are in the wrong order.
+The Bubble Sort algorithm sorts an unordered list by repeatedly stepping through the list and swapping elements if they are in the wrong order.
 
 Give a small list such as:
 
@@ -43,7 +43,7 @@ def display(some_list):
 
 ## Swapping variables
 
-- Integral to the bubblesort algorithm is the ability to swap elements in a list around.
+- Integral to the Bubble Sort algorithm is the ability to swap elements in a list around.
 Start by thinking about two variables each with different values. Type the following into a Python interpreter
 
 	```python

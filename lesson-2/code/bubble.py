@@ -15,7 +15,7 @@ def display(some_list):
 
 def my_bubble_sort(some_list):
     swapped = True
-    while swapped == True:
+    while swapped:
         swapped = False
         for i in range(len(some_list)-1):
             if some_list[i] > some_list[i + 1]:
@@ -24,11 +24,4 @@ def my_bubble_sort(some_list):
                 swapped = True
     return some_list
 
-#my_bubble_sort(create_random_list())
-
-some_list = create_random_list(10)
-while True:
-    for i in range(len(some_list)-1):
-        if some_list[i] > some_list[i + 1]:
-            some_list[i],some_list[i+1] = some_list[i + 1],some_list[i]
-            display(some_list)
+my_bubble_sort(create_random_list(20))

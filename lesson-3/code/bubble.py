@@ -24,4 +24,13 @@ def my_bubble_sort(some_list):
                 swapped = True
     return some_list
 
-my_bubble_sort(create_random_list(20))
+def my_insertion_sort(some_list):
+    for i in range(1,len(some_list)):
+        j = i
+        while j > 0 and some_list[j-1] > some_list[j]:
+            some_list[j],some_list[j-1]=some_list[j-1],some_list[j]
+            j-=1
+            display(some_list)
+    return some_list
+
+my_insertion_sort(create_random_list(20))
