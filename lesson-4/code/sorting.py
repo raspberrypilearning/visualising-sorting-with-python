@@ -11,7 +11,7 @@ def create_random_list(length):
 
 def display(some_list):
     plt.clf()
-    plt.bar(range(len(some_list)),some_list)
+    plt.scatter(range(len(some_list)),some_list)
     plt.draw()
 
 def my_bubble_sort(some_list):
@@ -35,13 +35,17 @@ def my_insertion_sort(some_list):
 
 def my_selection_sort(some_list):
     for i in range(len(some_list)):
-        smallest_position = i
-        for j in range(i+1,len(some_list)):
-            if some_list[j] < some_list[smallest_position]:
-                smallest_position = j
-        some_list[smallest_position],some_list[i] = some_list[i],some_list[smallest_position]
-        display(some_list)
+        smallest_value = i
 
+        for j in range(i+1,len(some_list)):
+            if some_list[j] < some_list[smallest_value]:
+                smallest_value = j
+
+        some_list[smallest_value], some_list[i] = some_list[i], some_list[smallest_value]
+        display(some_list)	
+
+    return some_list
+    
 def my_quick_sort(some_list):
     small = []
     equal = []
@@ -64,5 +68,6 @@ def my_quick_sort(some_list):
 
 #my_bubble_sort(create_random_list(100))
 #my_insertion_sort(create_random_list(100))
-#my_selection_sort(create_random_list(100))
+my_selection_sort(create_random_list(200))
 #my_quick_sort(create_random_list(100))
+
