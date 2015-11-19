@@ -1,4 +1,4 @@
-# Lesson 3 - Selection Sort
+# Lesson 4 - Selection Sort
 
 The selection sort algorithm is probably one of the easisest algorithms to understand, as it is very similar in nature to the way a human would sort a list.
 

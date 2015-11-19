@@ -1,167 +1,59 @@
-# Lesson 3 - Selection Sort
+# Lesson 5 - Recursion
 
-The selection sort algorithm is probably one of the easisest algorithms to understand, as it is very similar in nature to the way a human would sort a list.
+Before you learn the final sorting algorithm you're going to have to learn about a powerful concept in Computer Science called **Recursion**
 
-The selection sort algorithm steps through an unordered list, keeping track of the smallest value it encounters, and once it has iterated through the entire list, it moves this value to the start of the list.
+## Finding Factorials
 
-This is repeated, until the list is sorted.
+You can start with a very simple algorithm. Imagine you wanted to *Find the factorial of the number 10*. That is the result of multiplying 10*9*8*7*6*5*4*3*2*1 = 3628800
 
-Give a small list such as:
+You could solve this by using a simple loop. With *recursion* you break the problem down into smaller problems of the same type. Another way of rephrasing the problem *Find the factorial of 10* is to say, *Find the factorial of the number 9, and multiply it by 10.* Or even, *Find the factorial of the number (10-1) and multiply it by 10*
 
-    `[4,3,6,2]`
+Of course, we now have a new problem of *Find the factorial of (10-1)*, but we can solve this in the same way. We can just *Find the factorial of ((10-1)-1)*
 
-The first value `4` is assumed to be the smallest value. The next item in the list `3` is looked and as this is smaller than `4`, it becomes the smallest value.
+We can keep going in this manner until we end up with trying to find the factorial of 1. At this point, we'd want our algorithm stop. This is called the **base case**
 
-Next `6` is looked at. It is larger than `3` so `3` remains the smalles value. Finally, for this iteration the value `2` is looked at. As it is the smaller than `3` it now becomes the smallest value.
-
-As the algorithm has reached the end of the list, the `2` is swapped with the `4`
-
-    `[2,3,6,4]`
-
-Next the algorithm makes the `3` the smallest value. This is compared to `6` and then `4` but as it is always smaller, it is left alone.
-
-    `[2,3,6,4]'
-
-Lastly the `6` is made the smallest value. It is compared with the `4`, which is smaller, so `4` becomes the smallest value. As the algorithm has reached the end of the list, the `6` and `4` are swapped.
-
-    `[2,3,4,6]`
-
-The list is now sorted.
-
-## Starting off
-
-- Load up your *sorting.py* file from the previous lesson.
-- Comment out any function calls you might have from previous lessons.
-
-	```python
-	#my_bubble_sort(create_random_list(20))
-	#my_insertion_sort(create_random_list(20))
-	```
-
-## Sorting a single item.
-
-- As you've done in previous lessons, start by creating a small list.
+You can write this in code as follows.
 
 ```python
-some_list = [4,3,6,2]
+def factorial(n):			### Find the factorial of a number n
+    if n == 1:				### Base case - if the number is 1    
+        return 1                        ### Factorial of 1 is one, so return it
+    else:                               ### If the number is greater than 1
+        return n * factorial(n-1)       ### Multiply the number by the factorial of the next number down
+
+print(factorial(10))                    ### Find and print the factorial of 10
 ```
 
-- You can begin your selection sort algorithm by manually setting the starting position to 0.
+Run the code and you should see the answer displayed.
+
+To see what is going on with the algorithm, a few print statements might help.
 
 ```python
-some_list = [4,3,6,2]
+def factorial(n):
+    print("Finding the factorial of",n)
+    if n == 1:
+        print(n)
+        return 1
+    else:
+        answer = n * factorial(n-1)
+        print("The answer is",answer)
+        return answer
 
-i = 0
+print(factorial(10))
 ```
 
-- Next you need to make that initial starting value the `smallest_value`
+When you run this you should notice that no actual answer is provided until the *base case* has been reached. All the other function calls are saved in something called the *call stack*. Once the base case has been found, the answer trickles back up the *call stack* until the final answer is reached.
 
-```python
-some_list = [4,3,6,2]
+## Finding the largest common divisor
 
-i = 0
-smallest_value = i
-```
+Another algorithm that uses recursion is one to find the *Greatest Common Divisor*. This algorithm was actuall invented around 300BC by a greek mathematician called Euclid.
 
-- Now you can use a for loop to iterate over the entire list (excluding the 0th element), and find which one is the smallest.
+Imagine you have two numbers, and you want to find a the largest number that can divide into them exactly, say 100 and 46.
 
-```python
-some_list = [4,3,6,2]
+If the smaller number divides exactly into the larger number, then the small number is the Greatest Common Divisor. This is your *base case*. If it doesn't then you can find the remainder of the division.
 
-i = 0
-smallest_value = i
-
-for j in range(i+1,len(some_list)):
-    if some_list[j] < some_list[smallest_value]:
-        smallest_value = j
-```
-
-- Test your script to make sure it is correctly reporting the *smallest value* by running it and then typing `smallest_value` into the interpreter. Given the list above, you should get back the value `3` indicating the *3rd* element of the list. Try `some_list[smallest_value]` to see the actual value.
-
-- With the smallest value having been discovered, you can now use the same swapping mechanism as you have used in previous sorts.
-
-```python
-some_list = [4,3,6,2]
-
-i = 0
-smallest_value = i
-
-for j in range(i+1,len(some_list)):
-    if some_list[j] < some_list[smallest_value]:
-        smallest_value = j
-	
-some_list[smallest_value], some_list[i] = some_list[i], some_list[smallest_value]
-```
-
-- By putting a couple of `display()` calls and a `sleep()` in the script, you can see the swap taking place.
-
-```python
-some_list = [4,3,6,2]
-
-display(some_list)
-
-i = 0
-smallest_value = i
-
-for j in range(i+1,len(some_list)):
-    if some_list[j] < some_list[smallest_value]:
-        smallest_value = j
-	
-some_list[smallest_value], some_list[i] = some_list[i], some_list[smallest_value]
-sleep(1)	
-display(some_list)	
-```
-
-## Running through the entire list
-- The last part is trivial. You now need to iterate over the entire list, starting from *position 0* up to the length of the list. Place all your code in a `for` loop and remove the setting of `i` to `0`.
-
-```python
-some_list = [4,3,6,2]
-
-for i in range(len(some_list)):
-	smallest_value = i
-
-	for j in range(i+1,len(some_list)):
-		if some_list[j] < some_list[smallest_value]:
-			smallest_value = j
-
-	some_list[smallest_value], some_list[i] = some_list[i], some_list[smallest_value]
-	sleep(1)	
-	display(some_list)
-```
-
-## Wrapping it all up
-- As before, place your code inside a function and call it with a random list. (You're probably best to remove the `sleep()` as well.
-
-```python
-def my_selection_sort(some_list):
-    for i in range(len(some_list)):
-        smallest_value = i
-
-        for j in range(i+1,len(some_list)):
-            if some_list[j] < some_list[smallest_value]:
-                smallest_value = j
-
-        some_list[smallest_value], some_list[i] = some_list[i], some_list[smallest_value]
-        display(some_list)	
-
-    return some_list
-
-my_selection_sort(create_random_list(20))
-
-```
-
-- Because the selection sort is pretty quick, you might want to adjust the size of the list up to 100.
-
-```python
-my_selection_sort(create_random_list(20))
-```
-
-- It's also quite nice to visualise this one as a scatter plot.
-
-```python
-def display(some_list):
-    plt.clf()
-    plt.scatter(range(len(some_list)),some_list)
-    plt.draw()
-```
+This remainder 
+100 % 46 == 8
+46 % 8 == 6
+8 % 6 == 2
+6 % 2 == 0

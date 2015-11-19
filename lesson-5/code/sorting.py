@@ -51,7 +51,7 @@ def my_selection_sort(some_list):
 
     return some_list
 
-#my_bubble_sort(create_random_list(250))
+my_bubble_sort(create_random_list(250))
 # #my_insertion_sort(create_random_list(250))
 # #my_selection_sort(create_random_list(250))
 
