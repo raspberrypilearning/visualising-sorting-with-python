@@ -1,5 +1,6 @@
 import matplotlib.pyplot as plt
 from random import shuffle
+from time import sleep
 
 plt.ion()
 
@@ -13,15 +14,13 @@ def display(some_list):
     plt.scatter(range(len(some_list)),some_list)
     plt.draw()
 
-def my_bubble_sort(some_list):
-    swapped = True
-    while swapped:
-        swapped = False
-        for i in range(len(some_list)-1):
-            if some_list[i] > some_list[i + 1]:
-                some_list[i],some_list[i+1] = some_list[i + 1],some_list[i]
-                swapped = True
+def my_insertion_sort(some_list):
+    for i in range(1,len(some_list)):
+        while i > 0 and some_list[i-1] > some_list[i]:
+            some_list[i], some_list[i-1] = some_list[i-1], some_list[i]
+            i-=1
         display(some_list)
     return some_list
 
-my_bubble_sort(create_random_list(200))
+my_insertion_sort(create_random_list(200))
+
