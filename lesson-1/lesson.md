@@ -59,7 +59,7 @@ Learning about sorting algorithms is a particularly dry topic for many students.
 4. `[0,2,4,6,8,10]`
 5. `[[0,0,0],[1,1,1],[2,2,2]]`
 
-The solutions are
+Example solutions are:
 1. `[i for i in range(10)]`
 2. `[i for i in range(5,10)]`
 3. `[i for i in range(-9,1)]`
@@ -68,14 +68,18 @@ The solutions are
 
 - Students should then work through the second part of the worksheet which introduces them to the concept of drawing graphs with matplotlib.
 
-- After the majority of students have completed the graphing tasks, you can have a quick competition to see who can write code to create the following graphs.
-
 
 ## Plenary
 
-Plenary...
+- After the majority of students have completed the graphing tasks, you can have a quick competition to see who can write code to create the following graphs.
+
+![figure_6](images/figure_6.png)
+
+![figure_7](images/figure_7.png)
+
+![figure_8](images/figure_8.png)
+ 
 
 ## Homework
 
-- Something
-- Something else
+- Students should conduct some research to come up with a list of sorting algorithms. No details are required of the sorts for now.
