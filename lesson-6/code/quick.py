@@ -2,7 +2,6 @@ import matplotlib.pyplot as plt
 from random import shuffle
 from time import sleep
 
-
 ## Interactive graph plotting
 plt.ion()
 
@@ -24,6 +23,7 @@ class Node(object):
         self.parent = parent
         self.data = None
         self.children = []
+        self.direction = None
 
     def add_child(self, obj):
         self.children.append(obj)
@@ -53,20 +53,17 @@ def my_quick_sort(some_list,node):
         n.add_data(some_list)
         return some_list
 
-
-## NOT WORKING
-def find_leaf2(obj):
-    print('Running')
-    if obj.children and obj.children.data[0] != None:
-        for i in range(len(obj.children)):
-            find_leaf2(obj.children[i])
+def render_leaves(obj,some_list):
+    '''Assemble leaf node's data and visualise'''
+    if not obj.children:
+        some_list.append(obj.data)
+        del(obj)
+        return some_list
     else:
-        print('Caught')
-        my_list.append(obj.data)
-        obj.data = None
+        return render_leaves(obj.children[(len(obj.children)-1)],some_list)
         
-
 tree = Node(None)
 sorted_list = my_quick_sort(create_random_list(50),tree)
-my_list=[]
+data = render_leaves(tree,[])
+
 

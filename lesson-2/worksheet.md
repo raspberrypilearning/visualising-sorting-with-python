@@ -4,18 +4,18 @@ The Bubble Sort algorithm sorts an unordered list by repeatedly stepping through
 
 Give a small list such as:
 
-`[4,3,6,5]`
+`[4,3,6,1]`
 
-The algorithm would begin by comparing the first two elements: `4` and `3`. As they are in thr wrong order, they would be swapped, to give:
+The algorithm would begin by comparing the first two elements: `4` and `3`. As they are in the wrong order, they would be swapped, to give:
 
-`[3,4,6,5]`
+`[3,4,6,1]`
 
 Next `4` and `6` would be compared. These are in the correct order, so are left alone.
-Next `6` and `5` would be compared and swapped to give:
+Next `6` and `1` would be compared and swapped to give:
 
-`[3,4,5,6]`
+`[3,4,1,6]`
 
-In this example the list is now sorted. If it were not yet sorted the algorithm would start at the beginning again, and keep repeating until the list is completely sorted.
+As you can see, the list is not yet sorted, so the alogrithm now goes back to the start, comparing pairs of numbers and *bubbling* the higher numbers upwards until they are in the correct place.
 ...
 
 ## Some useful functions
@@ -38,7 +38,7 @@ def display(some_list):
     
 ```
 - The first of these functions creates a list of random numbers.
-- The second function displays the contents of a list as a barchart.
+- The second function displays the contents of a list as a bar chart.
 - Copy the code into a new file called **sorting.py**
 
 ## Swapping variables
@@ -76,7 +76,7 @@ Start by thinking about two variables each with different values. Type the follo
 	foo, bar = bar, foo
 	```
 
-- Check the values of `foo` and `bar` in the interpreter now, and wyou should see that they have swapped.
+- Check the values of `foo` and `bar` in the interpreter now, and you should see that they have swapped.
 
 ## Swapping elements in a list
 
@@ -149,9 +149,10 @@ for i in range(len(some_list)-1):
         print(some_list[i],'is greater than',some_list[i+1]
 ```
 
-- Run your code to see what happens. Can you explain why you only use one less than the length of the list? What would happen if the for loop read `for i in range(len(some_list))`? Try it and see.
+- Run your code to see what happens. Can you explain why you only use one less than the length of the list?
+- What would happen if the for loop read `for i in range(len(some_list))`? Try it and see.
 
--At the moment the loop just compares the elements in the list and tells us if it's bigger. You need it to swap the elements. You can also have a look at what's going on by using the `display()` function
+-At the moment the loop just compares the elements in the list and tells us if one is bigger than another. You need it to swap the elements. You can also have a look at what's going on by using the `display()` function
 
 ```python
 some_list = [6,2,5,1,7,4,9,3]
@@ -189,7 +190,9 @@ while True:
 			display(some_list)
 ```
 
-- This sorts the list, but the program never ends. The question is, how can you tell if the list is sorted? The key here is to see if an element in the list has been swapped. If in a single pass, no elements are swapped, then the list must be sorted.
+- This sorts the list, but the program never ends. The question is, how can you tell if the list is sorted?
+- The key to the problem is to see if an element in the list has been swapped during a pass. If in a pass through the list, any element has been swapped, we can assume the list is not yet sorted.
+- If in any single pass, no elements are swapped, then the list must therefore be sorted.
 
     ```python
     some_list = create_random_list(10)
@@ -223,3 +226,23 @@ def my_bubble_sort(some_list):
 ```python
 my_bubble_sort(create_random_list(20))
 ```
+
+- You might find that this is a little slow, especially if you increase the number of items in the list. By taking the `display()` function call out of the `for` loop, you can speed up the visualistaion.
+
+```python
+def my_bubble_sort(some_list):
+    swapped = True
+    while swapped:
+        swapped = False
+        for i in range(len(some_list)-1):
+            if some_list[i] > some_list[i + 1]:
+                some_list[i],some_list[i+1] = some_list[i + 1],some_list[i]
+			    swapped = True
+        display(some_list)
+
+    return some_list
+
+my_bubble_sort(create_random_list(100))
+```
+
+- Try changing the bar chart to a scatter chart to see a clearer visualisation.
