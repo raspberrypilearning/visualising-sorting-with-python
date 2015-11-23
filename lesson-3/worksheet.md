@@ -123,7 +123,7 @@ Finally, it can be seen that `3` is larger than `2` so again, they are swapped
 
 - This occurs because of the way lists can be indexed in Python. Once an item has been moved to *position 0* (so when `i` is `0`), `i` is decreased by `1` and so becomes `-1`.
 
-- In Python the *-1st* element of a list is the last element. Similarly, as `i` continues to reduce it started referencing the *-2nd*, *-3rd*, and *-4th* elements. In this list the *-4th* is also the *0th*. In Python, you can't cycle around again, so when the *-5th* element is attempted to be referenced, an error is thrown.
+- In Python the *-1st* item of a list is the last item. Similarly, as `i` continues to reduce it started referencing the *-2nd*, *-3rd*, and *-4th* items. In this list the *-4th* is also the *0th*. In Python, you can't cycle around again, so when the *-5th* item is attempted to be referenced, an error is thrown.
 
 - To avoid this error, you can just make sure the `while` loop only runs while `i > 0`.
 
@@ -141,9 +141,9 @@ Finally, it can be seen that `3` is larger than `2` so again, they are swapped
 
 ## Finishing the Insertion Sort
 
-- Now that you have code that can shift any given element in a list, from right to left, until it meets an element smaller than it, you can easily finish off the Insertion Sort.
+- Now that you have code that can shift any given item in a list, from right to left, until it meets an item smaller than it, you can easily finish off the Insertion Sort.
 
-- All you need to do it to use the algorithm you have written, on every element of the list, from the *1st* to the last. A `for` loop is the perfect way of doing this.
+- All you need to do it to use the algorithm you have written, on every item of the list, from the *1st* to the last. A `for` loop is the perfect way of doing this.
 
 	```python
 	some_list = [4,2,3,1]

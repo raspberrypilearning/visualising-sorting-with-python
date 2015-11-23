@@ -31,6 +31,8 @@ In this lesson studetns will implement an Insertion Sort in Python, and visualis
 
 - Insertion sort can easily be visualised using a pack of cards.
 
+![animation](images/insertion.gif)
+
 ## Main development
 
 ## Plenary

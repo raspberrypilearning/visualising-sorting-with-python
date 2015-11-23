@@ -21,7 +21,7 @@ def my_bubble_sort(some_list):
             if some_list[i] > some_list[i + 1]:
                 some_list[i],some_list[i+1] = some_list[i + 1],some_list[i]
                 swapped = True
-        display(some_list)
+#        display(some_list)
     return some_list
 
-my_bubble_sort(create_random_list(200))
+print(my_bubble_sort(create_random_list(5000))[-1])
