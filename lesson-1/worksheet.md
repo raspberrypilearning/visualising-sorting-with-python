@@ -1,7 +1,5 @@
 # Visualising Sorting with Python 1 - Graphing Data
 
-...
-
 ## Introduction
 
 Academics in the fields of Mathematics, the Sciences and the Humanities often need to present the data from their research and experiments.

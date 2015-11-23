@@ -171,4 +171,17 @@ Finally, it can be seen that `3` is larger than `2` so again, they are swapped
 	my_insertion_sort(create_random_list(100))
 	```
 
+- And you can speed up the visualisation, by shifting the `display()` call.
+
+	```python
+	def my_insertion_sort(some_list):
+		for i in range(1,len(some_list)):
+			while i > 0 and some_list[i-1] > some_list[i]:
+				some_list[i], some_list[i-1] = some_list[i-1], some_list[i]
+				i-=1
+			display(some_list)
+		return some_list
+
+	my_insertion_sort(create_random_list(100))
+	```
 
