@@ -38,7 +38,9 @@ In this lesson students will implement a bubble sort in Python, and visualise it
 
 ## Main development
 
-1. You may wish to describe the bubble sort algorithm to the class, or you could use one of many video clips that are available:
+1. You may wish to describe the bubble sort algorithm to the class, or you could use one of many video clips that are available, or the gif below.
+
+![animation](images/bubble_sort.gif)
 
 1. If you dislike your students, feel free to make them do a *bubble sort dance* like many mean-spirited CS teachers have done in the past.
 
