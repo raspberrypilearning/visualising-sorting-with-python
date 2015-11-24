@@ -1,35 +1,34 @@
-# Visualising Sorting with Python - Insertion Sort
+# Visualising Sorting with Python - Recursion
 
-In this lesson studetns will implement an Insertion Sort in Python, and visualise it's action using Matplotlib
+In this lesson, students will look at some classical solutions to various mathematical problems that utilise recursion.
 
 ## Learning objectives
 
-- To understand the mechanics and performance of the Insertion Sort algorithm
-- Something else
+- To understand what is meant by the term recursion
+- To be able to implement some simple recursive algorithms in Python
 
 ## Learning outcomes
 
 ### All students are able to
 
-- Describe the basic mechanics of the Insertion Sort algorithm
+- Describe what is meant by recursion.
 
 ### Most students are able to
 
-- Implement an Insertion Sort in Python
-- Describe in detail the mechanics of the Insertion Sort algorithm
+- Implement recursive solutions to finding factorials and gcd
 
 ### Some students are able to
 
-- Critically analyse the performance of the algorithm and identify it's weakesses 
+- Implement recursive solutions to detecting palindromes and creating a fibonnaci sequence.
 
 ## Lesson Summary
 
-- Students use Matplotlib to visualise a single element beign sorted using the algorithm.
-- Students implement the full sorting algorithm
+- Students are provided with a gentle introduction to recursion by using recursive algorithms to find factorials of a number and the gcd of two numbers.
+- Students can attmept to independently create recursive functions in Python to detect palindromes and create the Fibonnaci sequence.
 
 ## Starter
 
-- Insertion sort can easily be visualised using a pack of cards.
+- 
 
 ## Main development
 
