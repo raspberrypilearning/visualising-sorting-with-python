@@ -4,7 +4,7 @@
 
 Academics in the fields of Mathematics, the Sciences and the Humanities often need to present the data from their research and experiments.
 
-A key tool used by many academics is the Python programming language along with a library called Matplotlib. Infact Matplotlib is fast becoming the standard graphing tool used in Scientific publications.
+A key tool used by many academics is the Python programming language along with a library called Matplotlib. In fact Matplotlib is fast becoming the standard graphing tool used in Scientific publications.
 
 In this lesson, you will be learning how to use Python to create lists of numbers, and then using matplotlib to graph those numbers.
 
@@ -53,7 +53,7 @@ numbers = [i for i in range(10000)]
 	numbers = [i for i in range(5,10)
 	```
 
-1. Try using list comprehensions to crete the following lists:
+1. Try using list comprehensions to create the following lists:
     1. [10,11,12,13,14,15,16,17,18,19]
     1. [-5,-6,-7,-8,-9,0]
 
@@ -63,7 +63,7 @@ numbers = [i for i in range(10000)]
 numbers = [i for i in range(0,10,2)]
 ```
 
-1. Try using list comprehensions to crete the following lists:
+1. Try using list comprehensions to create the following lists:
     1. [0,3,6,8,12]
     1. [10,8,6,4,2,0]
 	1. [0,-1,-2,-3,-4,-5]
@@ -72,7 +72,7 @@ numbers = [i for i in range(0,10,2)]
 
 1. To produce a standard graph, you need to use two sets of values. Open up a new Python file and call it `graphing.py`
 
-1. You can start by producing two lists of numbers to graph. It doesn't really matter what numbers they are, but they must be the same length. We can acheive this by using the inbuilt `len()` function in Python. Call the lists `y` and `x`.
+1. You can start by producing two lists of numbers to graph. It doesn't really matter what numbers they are, but they must be the same length. We can achieve this by using the inbuilt `len()` function in Python. Call the lists `y` and `x`.
 
 	```python
 	y = [i for i in range(20,100,3)]

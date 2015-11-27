@@ -1,6 +1,6 @@
 # Lesson 4 - Selection Sort
 
-The selection sort algorithm is probably one of the easisest algorithms to understand, as it is very similar in nature to the way a human would sort a list.
+The selection sort algorithm is probably one of the easiest algorithms to understand, as it is very similar in nature to the way a human would sort a list.
 
 The selection sort algorithm steps through an unordered list, keeping track of the smallest value it encounters, and once it has iterated through the entire list, it moves this value to the start of the list.
 
@@ -12,7 +12,7 @@ Give a small list such as:
 
 The first value `4` is assumed to be the smallest value. The next item in the list `3` is looked and as this is smaller than `4`, it becomes the smallest value.
 
-Next `6` is looked at. It is larger than `3` so `3` remains the smalles value. Finally, for this iteration the value `2` is looked at. As it is the smaller than `3` it now becomes the smallest value.
+Next `6` is looked at. It is larger than `3` so `3` remains the smallest value. Finally, for this iteration the value `2` is looked at. As it is the smaller than `3` it now becomes the smallest value.
 
 As the algorithm has reached the end of the list, the `2` is swapped with the `4`
 

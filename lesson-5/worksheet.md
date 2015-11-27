@@ -94,7 +94,7 @@ This algorithm is extremely important in cryptography, where it is often necessa
 	gcd(1022,2011)
 	```
 
-Can you use you `gcd()` function to create an algorithm that will count the number of co-primes any number has? How many co-primes does the number `63` have? 
+Can you use your `gcd()` function to create an algorithm that will count the number of co-primes any number has? How many co-primes does the number `63` have? 
 
 ## Is it a palindrome?
 
@@ -121,25 +121,25 @@ And here's some helpful code that you might need:
 	'my string'[1:-1] ## the string with the first and last characters sliced off 
 	```
 
-## The Fibonnaci sequence.
+## The Fibonacci sequence.
 
-The Fibonnaci sequence is found by starting with `1, 1` and then adding the last number to the number preceding it in the sequence.
+The Fibonacci sequence is found by starting with `1, 1` and then adding the last number to the number preceding it in the sequence.
 
 	```
 	1, 1, 2, 3, 5, 8, 13, 21...
 	```
 
-Imagine you wanted to find the `n`th fibonnaci number. How could this be done?
+Imagine you wanted to find the `n`th Fibonacci number. How could this be done?
 
-Hopefully you are beginning to see that there is a recursive solution to this. ALl you need to do is find the `n-1`th Fibonnaci number and add it to the `n-2`th Fibonnaci number, and that will give you the `n`th.
+Hopefully you are beginning to see that there is a recursive solution to this. All you need to do is find the `n-1`th Fibonacci number and add it to the `n-2`th Fibonacci number, and that will give you the `n`th.
 
-Have a go at writing a recursive algorithm to find the `n`th Fibonnaci number. You can test your algorithm using the values provided below.
+Have a go at writing a recursive algorithm to find the `n`th Fibonacci number. You can test your algorithm using the values provided below.
 
 	```
-	The 10th Fibonnaci number is 55
-	The 2nd Fibonnaci number is 1
-	The 20th Fibonnaci number is 6765
+	The 10th Fibonacci number is 55
+	The 2nd Fibonacci number is 1
+	The 20th Fibonacci number is 6765
 	```
 
-Bewarned - recursive solutions aren't always the best solutions. Trying too large a number with this algorithm may well take a significant amount of time.
+Be-warned - recursive solutions aren't always the best solutions. Trying too large a number with this algorithm may well take a significant amount of time.
 

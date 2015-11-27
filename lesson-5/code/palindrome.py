@@ -5,3 +5,6 @@ def find_palindrome(word):
         return find_palindrome(word[1:-1])
     else:
         return False
+
+if find_palindrome('abcdefedcba'):
+    print('Yep')

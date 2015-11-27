@@ -7,7 +7,7 @@
 	[39, 30, 45, 33, 20, 61, 36, 5, 31, 64, 22, 10, 21, 25, 80, 86, 63, 27, 85, 2, 71, 4, 5]
 	```
 
-- Sorting this list can be achieved by using a *divide and conqueor* technique. That is, breaking the problem up into a smaller problems.
+- Sorting this list can be achieved by using a *divide and conquer* technique. That is, breaking the problem up into a smaller problems.
 
 - First you need to choose a single item from the list. It doesn't matter which one, so pick a random item - `22`. This is called the *pivot*
 
@@ -153,7 +153,7 @@
 		return some_list			
 	```
 
-- Try your new recursive quicksort funtion by calling it:
+- Try your new recursive quicksort function by calling it:
 
 	```python
 	print(my_quicksort(some_list))
@@ -169,6 +169,6 @@
 
 ## Optimising Quicksort
 - Quicksort is pretty fast, but can be made faster when a list is already partially sorted.
-- This can be done by carefull choice of a pivot value.
+- This can be done by careful choice of a pivot value.
 - The best pivot to choose is the *median* value of the first, last and middle items in the list. (That is the middle value of the three)
 - Can you alter your code so that you use this optimisation?

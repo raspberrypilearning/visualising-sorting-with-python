@@ -48,6 +48,7 @@ def my_quick_sort(some_list,node):
             else:
                 equal.append(i)
         n.add_data(small+equal+large)
+        display(my_quick_sort(small,n) + my_quick_sort(equal,n) + my_quick_sort(large,n))
         return my_quick_sort(small,n) + my_quick_sort(equal,n) + my_quick_sort(large,n)
     else:
         n.add_data(some_list)
