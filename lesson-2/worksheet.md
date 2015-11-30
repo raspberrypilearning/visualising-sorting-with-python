@@ -1,22 +1,18 @@
 # Lesson 2 - Bubble Sort
 
-- The Bubble Sort algorithm sorts an unordered list by repeatedly stepping through the list and swapping items if they are in the wrong order.
-
-- Give a small list such as:
+The bubble sort algorithm sorts an unordered list by repeatedly stepping through the list and swapping items if they are in the wrong order. With a small list such as:
 
 	`[4,3,6,1]`
 
-- The algorithm would begin by comparing the first two items: `4` and `3`. As they are in the wrong order, they would be swapped, to give:
+the algorithm would begin by comparing the first two items: `4` and `3`. As they are in the wrong order, they would be swapped to give:
 
 	`[3,4,6,1]`
 
-- Next `4` and `6` would be compared. These are in the correct order, so are left alone.
-- Next `6` and `1` would be compared and swapped to give:
+Next, `4` and `6` would be compared. These are in the correct order so are left alone. Then, `6` and `1` would be compared and swapped to give:
 
 	`[3,4,1,6]`
 
-- As you can see, the list is not yet sorted, so the algorithm now goes back to the start, comparing pairs of numbers and *bubbling* the higher numbers upwards until they are in the correct place.
-...
+As you can see, the list is not yet sorted, so the algorithm now goes back to the start, comparing pairs of numbers and *bubbling* the higher numbers upwards until they are in the correct place.
 
 ## Some useful functions
 
@@ -37,23 +33,19 @@ def display(some_list):
     plt.draw()
     
 ```
-- The first of these functions creates a list of random numbers.
-- The second function displays the contents of a list as a bar chart.
-- Copy the code into a new file called **sorting.py**.
+
+The first of these functions creates a list of random numbers; the second function displays the contents of a list as a bar chart. Copy the code into a new file called `sorting.py`.
 
 ## Swapping variables
 
-- Integral to the Bubble Sort algorithm is the ability to swap items in a list around.
-Start by thinking about two variables each with different values. Type the following into a Python interpreter:
+Integral to the bubble sort algorithm is the ability to swap items around in a list. Start by thinking about two variables, each with different values. Type the following into a Python interpreter:
 
 	```python
 	foo = 'first'
 	bar = 'second'
 	```
 
-- How could these be easily swapped around so that `foo` is equal to `'second'` and `bar` is equal to `'first'`?
-
-- The first way of achieving this is to use a *hold* variable. Try the following in the interpreter:
+How could these be easily swapped around, so that `foo` is equal to `'second'` and `bar` is equal to `'first'`? The first way of achieving this is to use a *hold* variable. Try the following in the interpreter:
 
 	```python
 	hold = foo
@@ -61,33 +53,32 @@ Start by thinking about two variables each with different values. Type the follo
 	bar = hold
 	```
 
-- Now type `foo` and `bar` into the interpreter, and you should see that their values have been swapped!
+Now type `foo` and `bar` into the interpreter, and you should see that their values have been swapped!
 
-- In Python there is an easier way of swapping variable around though. Start again by reassigning `foo` and `bar`
+In Python there is an easier way of swapping variables around, though. Start again by reassigning `foo` and `bar`:
 
 	```python
 	foo = 'first'
 	bar = 'second'
 	```
 
-- Now to swap them around, you only need a single line:
+Now to swap them around, you only need a single line:
 
 	```python
 	foo, bar = bar, foo
 	```
 
-- Check the values of `foo` and `bar` in the interpreter now, and you should see that they have swapped.
+Check the values of `foo` and `bar` in the interpreter now, and you should see that they have swapped.
 
 ## Swapping items in a list
 
-- The same process can be used to swap items in a list.
-- Type the following at the bottom of your `sorting.py` file.
+The same process can be used to swap items in a list. Type the following at the bottom of your `sorting.py` file.
 
 	```python
 	some_list=[3,2,1]
 	```
 
-- To get this list in order, you need to swap some items around.
+To get this list in order, you need to swap some items around:
 
     ```python
 	some_list = [3,2,1]
@@ -97,7 +88,7 @@ Start by thinking about two variables each with different values. Type the follo
 	print(some_list)
 	```
 
-- You can visualise the whole process by using the display() function.
+You can visualise the whole process by using the display() function:
 
 	```python
 	some_list = [3,2,1]
@@ -110,20 +101,21 @@ Start by thinking about two variables each with different values. Type the follo
 	display(some_list)
 	```
 	
-- If it is a little too fast to see, try adding a `sleep(1)` between each swap (but you'll have to add `from time import sleep` to the top of your file.
+If it's a little too fast to see, try adding a `sleep(1)` between each swap, but you'll have to add `from time import sleep` to the top of your file.
 	
-- Using this method, try and sort the following list and visualise it happening:
+Using this method, try and sort the following list and visualise it happening:
 
   ```python
   [2,1,5,3,]
   ```
-- Once you are done, you can delete or *comment* out the code.
+  
+Once you are done, you can delete or *comment* out the code.
 
-## Swapping in a loop.
+## Swapping in a loop
 
-- You need to automate the comparison of the list items and their swapping. To begin with you can implement a single pass through the list, swapping pairs of items if they are in the wrong order.
+You need to automate the comparison of the list items and their swapping. To begin with, you can implement a single pass through the list, swapping pairs of items if they are in the wrong order.
 
-- Comparing items in a list is fairly easy. Try the following in the interpreter:
+Comparing items in a list is fairly easy. Try the following in the interpreter:
 
 	```python
 	i = 0
@@ -131,16 +123,16 @@ Start by thinking about two variables each with different values. Type the follo
 	some_list[i] > some_list[i+1]
 	```
 
-- This should evaluate to `True` because the the 0th item of the list is larger than the first. We can reset `i` and try it again:
+This should evaluate to `True` because the the 0th item of the list is larger than the first. We can reset `i` and try it again:
 
 	```python
 	i = 1
 	some_list[i] > some_list[i+1]
 	```
 
-- This should evaluate to `False` as the 1st item of the list is not larger than the second.
+This should evaluate to `False`, as the 1st item of the list is not larger than the second.
 
-- You can try this inside a `for` loop so that every pair of items in the list is considered. Add the following lines to your **sorting.py** file. To start with you can just compare each item with next.
+You can try this inside a `for` loop so that every pair of items in the list is considered. Add the following lines to your **sorting.py** file. To start with, you can just compare each item with the next:
 
 	```python
 	some_list = [6,2,5,1,7,4,9,3]
@@ -149,11 +141,9 @@ Start by thinking about two variables each with different values. Type the follo
 			print(some_list[i],'is greater than',some_list[i+1]
 	```
 
-- Run your code to see what happens.
-- Can you explain why you only use one less than the length of the list (`len(some_list)-1`)?
-- What would happen if the for loop read `for i in range(len(some_list))`? Try it and see.
+Run your code to see what happens. Can you explain why you only use one less than the length of the list (`len(some_list)-1`)? What would happen if the `for` loop read `for i in range(len(some_list))`? Try it and see.
 
--At the moment the loop just compares the items in the list and tells us if one is bigger than another. You need it to swap the items. You can also have a look at what's going on by using the `display()` function
+At the moment, the loop just compares the items in the list and tells us if one is bigger than another, but you need it to swap the items too. You can also have a look at what's going on by using the `display()` function:
 
 	```python
 	some_list = [6,2,5,1,7,4,9,3]
@@ -163,9 +153,9 @@ Start by thinking about two variables each with different values. Type the follo
 			display(some_list)
 	```
 
-- Run this code, to see the items being swapped. If you need to slow it down, use a sleep() function right after the display() call.
+Run this code to see the items being swapped. If you need to slow it down, use a `sleep()` function right after the `display()` call.
 
-- You can try running this on an even longer list, by using the `create_random_list()` function.
+You can try running this on an even longer list, by using the `create_random_list()` function:
 
 	```python
 	some_list = create_random_list(100)
@@ -176,11 +166,11 @@ Start by thinking about two variables each with different values. Type the follo
 
 	```
 
-- You should see a column moving left to right. If it meets a column that is larger, it stops and the larger column moves along.
+You should see a column moving from left to right. If it meets a column that is larger, it stops and the larger column moves along.
 
 ## Sorting the list
 
-- Obviously, your list isn't sorted yet. The whole process needs to be repeated multiple times. To do this, you can place the whole loop inside a `while` loop.
+Obviously, your list isn't sorted yet. The whole process needs to be repeated multiple times. To do this, you can place the whole loop inside a `while` loop:
 
 	```python
 	some_list = create_random_list(10)
@@ -191,9 +181,7 @@ Start by thinking about two variables each with different values. Type the follo
 				display(some_list)
 	```
 
-- This sorts the list, but the program never ends. The question is, how can you tell if the list is sorted?
-- The key to the problem is to see if an item in the list has been swapped during a pass. If in a pass through the list, any item has been swapped, we can assume the list is not yet sorted.
-- If in any single pass, no items are swapped, then the list must therefore be sorted.
+This sorts the list, but the program never ends. The question is, how can you tell if the list is sorted? The key to the problem is to see if an item in the list has been swapped during a pass. If any item has been swapped in a pass through the list, we can assume the list is not yet sorted. If in any single pass no items are swapped, then the list must therefore be sorted.
 
     ```python
     some_list = create_random_list(10)
@@ -207,7 +195,7 @@ Start by thinking about two variables each with different values. Type the follo
                 swapped = True
 ```
 
-- To finish off, you just need to wrap your sorting algorithm up in a function:
+To finish off, you just need to wrap your sorting algorithm in a function:
 
 	```python
 	def my_bubble_sort(some_list):
@@ -222,13 +210,13 @@ Start by thinking about two variables each with different values. Type the follo
 		return some_list
 	```
 
-- You can call the function using the line:
+You can call the function using the line:
 
 	```python
 	my_bubble_sort(create_random_list(20))
 	```
 
-- You might find that this is a little slow, especially if you increase the number of items in the list. By taking the `display()` function call out of the `for` loop, you can speed up the visualisation.
+You might find that this is a little slow, especially if you increase the number of items in the list. By taking the `display()` function call out of the `for` loop, you can speed up the visualisation:
 
 	```python
 	def my_bubble_sort(some_list):
@@ -246,4 +234,4 @@ Start by thinking about two variables each with different values. Type the follo
 	my_bubble_sort(create_random_list(100))
 	```
 
-- Try changing the bar chart to a scatter chart to see a clearer visualisation.
+Try changing the bar chart to a scatter chart to see a clearer visualisation.
