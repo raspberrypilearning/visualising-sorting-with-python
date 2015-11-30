@@ -3,3 +3,7 @@ category: teach
 lessons:
     1: Graphing with Matplotlib
     2: Bubble Sort
+    3: Insertion Sort
+    4: Selection Sort
+    5: Recursion
+    6: Quicksort

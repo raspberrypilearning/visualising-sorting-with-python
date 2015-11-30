@@ -24,7 +24,7 @@ Depending on the exam board you are following, you might want to change this les
 ## Lesson Summary
 
 - In this lesson students will implement the Quicksort algorithm.
-- Unlike previous lessons, students will not be visualising the algorithm with matplotlib, as this complicates the code significantly.
+- This uses **quicksort in place** which can be a little more confusing than a quicksort where additional lists are created.
 
 ## Starter
 
@@ -34,48 +34,26 @@ Depending on the exam board you are following, you might want to change this les
 ## Main development
 
 - Students can work through the worksheet to implement a quicksort algorithm
+- It might be worth having the students add comments to their code, describing what the process is actually doing, to help gauge understanding.
 
 ## Plenary
 
-- Ask students why it might be difficult to visualise the performance of the quicksort algorithm using matplotlib.
-- They can put in a `display()` call into their function at various points, to see what the output is, or you can demonstrate it to them. 
+- Ask students to race against each other, each choosing their favourite sorting algorithm, to see which one is fastest. (Note - take out the `display()` calls to speed up the algorithms, and they can sort pretty big lists.)
 
 ## Extension
 
 - The extension is to optimise quicksort by picking a median value for the pivot.
-- A basic way of doing this is shown below.
+- This is quite a tricky task, and designed for the more able.
+- One possible solution would be to do the following when the pivot is chose.
 
 ```python
-from random import shuffle
-
-def create_random_list(length):
-    '''create a random list of given length'''
-    some_list = [i for i in range(length)]
-    shuffle(some_list)
-    return(some_list)
-
-def my_quick_sort(some_list):
-    small = []
-    equal = []
-    large = []
-    if len(some_list) > 1:
-        if some_list[0] > some_list[len(some_list)//2] > some_list[-1]:
-            pivot = some_list[len(some_list)//2]
-        elif some_list[len(some_list)//2] > some_list[-1] > some_list[0]:
-            pivot = some_list[-1]
+        middle = (stop - start) // 2
+        if some_list[start] > some_list[middle] > some_list[stop]:
+            pivot = some_list[middle]
+        elif some_list[start] > some_list[stop] > some_list[middle]:
+            pivot = some_list[stop]
         else:
-            pivot = some_list[0]	
-        for i in some_list:
-            if i > pivot:
-                large.append(i)
-            elif i < pivot:
-                small.append(i)
-            else:
-                equal.append(i)
-        return my_quick_sort(small) + my_quick_sort(equal) + my_quick_sort(large)
-    else:
-        return some_list
-
-sorted_list = my_quick_sort(create_random_list(50))
-
+            pivot = some_list[start]
 ```
+
+

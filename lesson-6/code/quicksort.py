@@ -1,31 +1,42 @@
+import matplotlib.pyplot as plt
 from random import shuffle
+from time import sleep
+
+plt.ion()
 
 def create_random_list(length):
-    '''create a random list of given length'''
     some_list = [i for i in range(length)]
     shuffle(some_list)
     return(some_list)
 
-def my_quick_sort(some_list):
-    small = []
-    equal = []
-    large = []
-    if len(some_list) > 1:
-        if some_list[0] > some_list[len(some_list)//2] > some_list[-1]:
-            pivot = some_list[len(some_list)//2]
-        elif some_list[len(some_list)//2] > some_list[-1] > some_list[0]:
-            pivot = some_list[-1]
-        else:
-            pivot = some_list[0]	
-        for i in some_list:
-            if i > pivot:
-                large.append(i)
-            elif i < pivot:
-                small.append(i)
-            else:
-                equal.append(i)
-        return my_quick_sort(small) + my_quick_sort(equal) + my_quick_sort(large)
-    else:
-        return some_list
+def display(some_list):
+    plt.clf()
+    plt.scatter(range(len(some_list)),some_list)
+    plt.draw()
 
-sorted_list = my_quick_sort(create_random_list(50))
+
+def my_quicksort(some_list, start, stop):
+    if stop - start < 1:
+        return None
+    else:
+        pivot, left, right = some_list[start], start, stop
+        while left <= right:
+            while some_list[left] < pivot:
+                left += 1
+            while some_list[right] > pivot:
+                right -= 1
+            if left <= right:
+                some_list[left], some_list[right] = some_list[right], some_list[left]
+                left += 1
+                right -= 1
+        display(some_list)
+        
+        my_quicksort(some_list, start, right)
+        my_quicksort(some_list, left, stop)
+        print(pivot)
+        
+
+#my_list = [6,4,8,2,9,1]
+my_list = create_random_list(500)
+my_quicksort(my_list,0,5)
+print(my_list)
