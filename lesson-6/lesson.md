@@ -1,6 +1,6 @@
-# Visualising Sorting with Python - Quick Sort
+# Visualising Sorting With Python 6 - Quicksort
 
-Depending on the exam board you are following, you might want to change this lesson to use an alternative recursive sorting algorithm.
+Depending on the exam board you are using, you might want to change this lesson to use an alternative recursive sorting algorithm.
 
 ## Learning objectives
 
@@ -10,41 +10,41 @@ Depending on the exam board you are following, you might want to change this les
 
 ### All students are able to
 
-- Describe the basic workings of the Quicksort algorithm
+- Describe the basic workings of the quicksort algorithm
 
 ### Most students are able to
 
-- Implement a Quicksort algorithm in Python
-- Describe in detail the mechanics of the Quicksort algorithm
+- Implement a quicksort algorithm in Python
+- Describe the mechanics of the quicksort algorithm in detail
 
 ### Some students are able to
 
-- Critically analyse the performance of the algorithm and identify it's weaknesses 
+- Critically analyse the performance of the algorithm and identify its weaknesses 
 
-## Lesson Summary
+## Lesson summary
 
-- In this lesson students will implement the Quicksort algorithm.
-- This uses **quicksort in place** which can be a little more confusing than a quicksort where additional lists are created.
+- In this lesson students will implement the quicksort algorithm
+- This uses **quicksort in place**, which can be a little more confusing than a quicksort where additional lists are created
 
 ## Starter
 
-- Ask students for a quick reminder as to what is meant by recursion.
-- Ask if they can possibly think of a single operation that could be applied to a list that might eventually allow it to be sorted.
+- Ask students for a quick reminder as to what is meant by recursion
+- Ask if they can think of a single operation that could be applied to a list that might eventually allow it to be sorted
 
 ## Main development
 
 - Students can work through the worksheet to implement a quicksort algorithm
-- It might be worth having the students add comments to their code, describing what the process is actually doing, to help gauge understanding.
+- It might be worth having the students add comments to their code, describing what the process is actually doing, to help gauge understanding
 
 ## Plenary
 
-- Ask students to race against each other, each choosing their favourite sorting algorithm, to see which one is fastest. (Note - take out the `display()` calls to speed up the algorithms, and they can sort pretty big lists.)
+- Ask students to race against each other, each choosing their favourite sorting algorithm, to see which one is fastest. **Note**: take out the `display()` calls to speed up the algorithms, so the students can sort big lists.
 
 ## Extension
 
 - The extension is to optimise quicksort by picking a median value for the pivot.
-- This is quite a tricky task, and designed for the more able.
-- One possible solution would be to do the following when the pivot is chose.
+- This is quite a tricky task, designed for the more able.
+- One possible solution would be to do the following when the pivot is chosen:
 
 ```python
         middle = (stop - start) // 2
