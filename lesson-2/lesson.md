@@ -1,44 +1,43 @@
-# Visualising Sorting with Python - Bubble sort
+# Visualising Sorting With Python - Bubble sort
 
-In this lesson students will implement a bubble sort in Python, and visualise it's action using Matplotlib
+In this lesson students will implement a bubble sort in Python, and visualise its action using matplotlib.
 
 ## Learning objectives
 
 - To understand the mechanics and performance of the bubble sort algorithm
-- Something else
 
 ## Learning outcomes
 
 ### All students are able to
 
-- Swap variables around using tupple unpacking
+- Swap variables around using tuple unpacking
 - Describe the basic mechanics of the bubble sort algorithm
 
 ### Most students are able to
 
 - Implement a bubble sort in Python
-- Describe in detail the mechanics of the bubble sort algorithm
+- Describe the mechanics of the bubble sort algorithm in detail
 
 ### Some students are able to
 
-- Critically analyse the performance of the algorithm and identify it's weaknesses 
+- Critically analyse the performance of the algorithm and identify its weaknesses 
 
-## Lesson Summary
+## Lesson summary
 
-- Students step through how to swap variables and elements in a list.
-- Students look at swapping elements in a list using loops, based on an items size, to implement a bubble sort.
+- Students step through how to swap variables and elements in a list
+- Students look at swapping elements in a list using loops, based on an item's size, to implement a bubble sort
 
 ## Starter
 
-- Give a student a book and ask her to find a particular numbered page.
-- Ask the student to describe the process by which they found the numbered page.
-- Explain that it is much easier to find an item in a collection of items, if they are all in order.
-- You could demonstrate this using a pack of shuffled and unshuffled cards.
-- Hopefully the students will realise why being able to sort data is important.
+- Give a student a book and ask her to find a particular numbered page
+- Ask the student to describe the process by which they found the numbered page
+- Explain that it's much easier to find an item in a collection of items if they're all in order
+- You could demonstrate this using a pack of shuffled and unshuffled cards
+- This will aid the students in realising why being able to sort data is important
 
 ## Main development
 
-1. You may wish to describe the bubble sort algorithm to the class, or you could use one of many video clips that are available, or the gif below.
+1. You may wish to describe the bubble sort algorithm to the class; alternatively, you could use one of many video clips that are available, or the gif below:
 
 ![animation](images/bubble_sort.gif)
 
@@ -50,11 +49,8 @@ In this lesson students will implement a bubble sort in Python, and visualise it
 
 ## Plenary
 
-- Ask students to comment on the efficiency of the Bubble sort algorithm, for instance are there any operations that are conducted that are wasteful?
-- The final run of the `for` loop will always iterate over a sorted list (for instance).
+- Ask students to comment on the efficiency of the bubble sort algorithm. For instance, are there any operations conducted that are wasteful? The final run of the `for` loop will always iterate over a sorted list, for example.
 
 ## Extension
 
-- Students can look online to find examples of *optimised* bubble sorts and try to explain why these are improvements
-
-
+- Students can look online to find examples of *optimised* bubble sorts and try to explain why these are improvements.
