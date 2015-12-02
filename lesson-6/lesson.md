@@ -24,7 +24,8 @@ Depending on the exam board you are using, you might want to change this lesson 
 ## Lesson summary
 
 - In this lesson students will implement the quicksort algorithm
-- This uses **quicksort in place**, which can be a little more confusing than a quicksort where additional lists are created
+- This uses **quicksort in place**, which can be a little more confusing than a quicksort where additional lists are created.
+- A [second worksheet](worksheet2.md) is available using a **quicksort** that splits each list into three seperate lists, but this is therefore difficult to analyse with matplotlib.
 
 ## Starter
 
