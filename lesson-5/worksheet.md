@@ -8,7 +8,7 @@ You can start with a very simple algorithm. Imagine you wanted to find the **fac
 
 Another way of rephrasing the problem 'find the factorial of 10' is to say 'find the factorial of 9 and multiply it by 10, or even 'find the factorial of the number (10-1) and multiply it by 10'. Of course, we now have a new problem of 'find the factorial of (10-1)', but we can solve this in the same way. We can just find the factorial of 8 multiplied by 9, and then multiply it by 10. We can keep going in this manner until we end up trying to find the factorial of 1. At this point, we'd want our algorithm to stop. This is called the **base case**.
 
-You can write this in code as follows:
+1. You can write this in code as follows:
 
 	```python
 	def factorial(n):			            # Find the factorial of a number n
@@ -20,23 +20,23 @@ You can write this in code as follows:
 	print(factorial(10))                    # Find and print the factorial of 10
 	```
 
-Run the code and you should see the answer displayed.
+1. Run the code and you should see the answer displayed.
 
-To see what's going on with the algorithm, a few `print` statements might help:
+1. To see what's going on with the algorithm, a few `print` statements might help:
 
-	```python
-	def factorial(n):
-		print("Finding the factorial of",n)
-		if n == 1:
-			print(n)
-			return 1
-		else:
-			answer = n * factorial(n-1)
-			print("The answer is",answer)
-			return answer
+```python
+def factorial(n):
+	print("Finding the factorial of",n)
+	if n == 1:
+		print(n)
+		return 1
+	else:
+		answer = n * factorial(n-1)
+		print("The answer is",answer)
+		return answer
 
-	print(factorial(10))
-	```
+print(factorial(10))
+```
 
 When you run this you should notice that no actual answer is provided until the *base case* has been reached. All the other function calls are saved in something called the *call stack*. Once the base case has been found, the answer trickles back up the *call stack* until the final answer is reached.
 
@@ -46,45 +46,45 @@ Another algorithm that uses recursion is one to find the *greatest common diviso
 
 Imagine you have two numbers, and you want to find a the largest number that can divide into them exactly, such as 100 and 46. If the smaller number divides exactly into the larger number, then the small number is the greatest common divisor. This is your *base case*. If it doesn't, then you can find the remainder of the division. In Python you can use the modulo operator (`%`) to find the remainder of a division:
 
-	```python
-	100 % 46
-	```
+```python
+100 % 46
+```
 
 Type this into your interpreter, and you should see the answer is `8`. You can now find the remainder of dividing `46` by `8`:
 
-	```python
-	46 % 8
-	```
+```python
+46 % 8
+```
 
 This gives the answer `6`. Once again, you can find a remainder:
 
-	```python
-	8 % 6
-	```
+```python
+8 % 6
+```
 
 Now you have the answer `2`:
 
-	```python
-	6 % 2
-	```
+```python
+6 % 2
+```
 
 This gives the answer `0`, so `2` must divide into `6` exactly. The *base case* has been reached and you can state that `2` is the *greatest common divisor* of `100` and `46`.
 
 You can see that the same calculation has been performed multiple times, using the result of the previous calculation. This problem is therefore a perfect candidate to be solved with recursion:
 
-	```python
-	def gcd(a,b):
-		if a % b == 0:
-			return b
-		else:
-			return gcd(b, a % b)
-	```
+```python
+def gcd(a,b):
+	if a % b == 0:
+		return b
+	else:
+		return gcd(b, a % b)
+```
 
 This algorithm is extremely important in cryptography, where it is often necessary to find two numbers that are *co-prime*, two numbers whose *greatest common divisor* is 1:
 
-	```python
-	gcd(1022,2011)
-	```
+```python
+gcd(1022,2011)
+```
 
 Can you use your `gcd()` function to create an algorithm that will count the number of co-primes any number has? How many co-primes does the number `63` have? 
 
@@ -98,28 +98,28 @@ See if you can write a recursive algorithm to tell if a string is a palindrome o
 
 Here's some pseudocode to try and help you along:
 
-	```
-	function find_palindrome(word)
-	if the length of the word is 1 or 0, then it's a palindrome
-	if the first and last letters are the same, then find_palindrome(word with first and last letters removed)
-	otherwise the word is not a palindrome
-	```
+```
+function find_palindrome(word)
+if the length of the word is 1 or 0, then it's a palindrome
+if the first and last letters are the same, then find_palindrome(word with first and last letters removed)
+otherwise the word is not a palindrome
+```
 
 And here's some helpful code that you might need:
 
-	```python
-	'my string'[0] # the first character of the string
-	'my string'[-1] # the last character of the string
-	'my string'[1:-1] # the string with the first and last characters removed 
-	```
+```python
+'my string'[0] # the first character of the string
+'my string'[-1] # the last character of the string
+'my string'[1:-1] # the string with the first and last characters removed 
+```
 
 ## The Fibonacci sequence
 
 The Fibonacci sequence is found by starting with `1, 1` and then adding the last number to the number preceding it in the sequence:
 
-	```
-	1, 1, 2, 3, 5, 8, 13, 21...
-	```
+```
+1, 1, 2, 3, 5, 8, 13, 21...
+```
 
 Imagine you wanted to find the `n`th Fibonacci number. How could this be done?
 
@@ -127,11 +127,11 @@ Hopefully, you are beginning to see that there is a recursive solution to this. 
 
 Have a go at writing a recursive algorithm to find the `n`th Fibonacci number. You can test your algorithm using the values provided below:
 
-	```
-	The 10th Fibonacci number is 55
-	The 2nd Fibonacci number is 1
-	The 20th Fibonacci number is 6765
-	```
+```
+The 10th Fibonacci number is 55
+The 2nd Fibonacci number is 1
+The 20th Fibonacci number is 6765
+```
 
 Be warned: recursive solutions aren't always the best solutions. Trying too large a number with this algorithm may well take a significant amount of time.
 

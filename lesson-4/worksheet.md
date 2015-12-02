@@ -24,8 +24,8 @@ The list is now sorted.
 
 ## Starting off
 
-- Load up your *sorting.py* file from the previous lesson.
-- Comment out any function calls you might have from previous lessons:
+1. Load up your *sorting.py* file from the previous lesson.
+1. Comment out any function calls you might have from previous lessons:
 
 	```python
 	#my_bubble_sort(create_random_list(20))
@@ -34,13 +34,13 @@ The list is now sorted.
 
 ## Sorting a single item
 
-- As you've done in previous lessons, start by creating a small list:
+1. As you've done in previous lessons, start by creating a small list:
 
   ```python
   some_list = [4,3,6,2]
   ```
 
-- You can begin your selection sort algorithm by manually setting the starting position to 0:
+1. You can begin your selection sort algorithm by manually setting the starting position to 0:
 
 	```python
 	some_list = [4,3,6,2]
@@ -48,7 +48,7 @@ The list is now sorted.
 	i = 0
 	```
 
-- Next, you need to make that initial starting value the `smallest_value`:
+1. Next, you need to make that initial starting value the `smallest_value`:
 
 	```python
 	some_list = [4,3,6,2]
@@ -57,7 +57,7 @@ The list is now sorted.
 	smallest_value = i
 	```
 
-- Now you can use a `for` loop to iterate over the entire list (excluding the 0th element), and find which one is the smallest:
+1. Now you can use a `for` loop to iterate over the entire list (excluding the 0th element), and find which one is the smallest:
 
 	```python
 	some_list = [4,3,6,2]
@@ -70,9 +70,9 @@ The list is now sorted.
 			smallest_value = j
 	```
 
-- Test your script to make sure it's correctly reporting the *smallest value* by running it and then typing `smallest_value` into the interpreter. Given the list above, you should get back the value `3` indicating the *3rd* element of the list. Try `some_list[smallest_value]` to see the actual value.
+1. Test your script to make sure it's correctly reporting the *smallest value* by running it and then typing `smallest_value` into the interpreter. Given the list above, you should get back the value `3` indicating the *3rd* element of the list. Try `some_list[smallest_value]` to see the actual value.
 
-- Now that you know the smallest value, you can now use the same swapping mechanism as you have used in previous sorts:
+1. Now that you know the smallest value, you can now use the same swapping mechanism as you have used in previous sorts:
 
 	```python
 	some_list = [4,3,6,2]
@@ -87,7 +87,7 @@ The list is now sorted.
 	some_list[smallest_value], some_list[i] = some_list[i], some_list[smallest_value]
 	```
 
-- By putting a couple of `display()` calls and a `sleep()` in the script, you can see the swap taking place:
+1. By putting a couple of `display()` calls and a `sleep()` in the script, you can see the swap taking place:
 
 	```python
 	some_list = [4,3,6,2]
@@ -108,26 +108,26 @@ The list is now sorted.
 
 ## Running through the entire list
 
-- You now need to iterate over the entire list, starting from *position 0* up to the length of the list. Place all your code in a `for` loop and remove the setting of `i` to 0:
+You now need to iterate over the entire list, starting from *position 0* up to the length of the list. Place all your code in a `for` loop and remove the setting of `i` to 0:
 
-	```python
-	some_list = [4,3,6,2]
+```python
+some_list = [4,3,6,2]
 
-	for i in range(len(some_list)):
-		smallest_value = i
+for i in range(len(some_list)):
+	smallest_value = i
 
-		for j in range(i+1,len(some_list)):
-			if some_list[j] < some_list[smallest_value]:
-				smallest_value = j
+	for j in range(i+1,len(some_list)):
+		if some_list[j] < some_list[smallest_value]:
+			smallest_value = j
 
-		some_list[smallest_value], some_list[i] = some_list[i], some_list[smallest_value]
-		sleep(1)	
-		display(some_list)
-	```
+	some_list[smallest_value], some_list[i] = some_list[i], some_list[smallest_value]
+	sleep(1)	
+	display(some_list)
+```
 
 ## Wrapping it all up
 
-- As before, place your code inside a function and call it with a random list. It's probably best to remove the `sleep()` as well:
+1. As before, place your code inside a function and call it with a random list. It's probably best to remove the `sleep()` as well:
 
 	```python
 	def my_selection_sort(some_list):
@@ -147,13 +147,13 @@ The list is now sorted.
 
 	```
 
-- Because the selection sort is pretty quick, you might want to adjust the size of the list up to 100:
+1. Because the selection sort is pretty quick, you might want to adjust the size of the list up to 100:
 
 	```python
 	my_selection_sort(create_random_list(100))
 	```
 
-- It's also quite nice to visualise this one as a scatter plot:
+1. It's also quite nice to visualise this one as a scatter plot:
 
 	```python
 	def display(some_list):

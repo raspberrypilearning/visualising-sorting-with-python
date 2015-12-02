@@ -10,9 +10,9 @@ In this lesson you will be learning how to use Python to create lists of numbers
 
 A list is a data structure - a way of storing data. If you wanted to store the numbers `0` to `9` in Python, you could write a list like this:
 
-	```python
-	numbers = [0,1,2,3,4,5,6,7,8,9]
-	```
+```python
+numbers = [0,1,2,3,4,5,6,7,8,9]
+```
 
 That's fairly simple for small lists, but if you wanted all the numbers from `0` to `9999` you would be typing for quite a long time. Uf you ever find yourself performing a very repetitive task when programming, there's probably an easier way of doing it. In this case, a fairly simple way to create the 10000-number list would be to use a loop.
 
@@ -117,9 +117,9 @@ Try using list comprehensions to create the following lists:
 
 so that it reads:
 
-	```python
-	plt.plot(x,y)
-	```
+```python
+plt.plot(x,y)
+```
 
 then run your code again.
 

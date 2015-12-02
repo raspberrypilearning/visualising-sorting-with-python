@@ -2,9 +2,9 @@
 
 The quicksort algorithm uses recursion and is a very efficient way of sorting a list. Given a list such as:
 
-	```python
-	[39, 30, 45, 33, 20, 61, 36, 5, 31, 64, 22, 10, 21, 25, 80, 86, 63, 27, 85, 2, 71, 4, 5]
-	```
+```python
+[39, 30, 45, 33, 20, 61, 36, 5, 31, 64, 22, 10, 21, 25, 80, 86, 63, 27, 85, 2, 71, 4, 5]
+```
 
 sorting this list can be achieved by using a *divide and conquer* technique, breaking the problem up into smaller problems.
 
@@ -40,13 +40,13 @@ sorting this list can be achieved by using a *divide and conquer* technique, bre
 
 Now you know what the quicksort algorithm is, you can try and code it. You'll need another method from the `random` library to do this, so edit the lines at the top of your file to read:
 
-	```python
-	from random import shuffle, choice
+```python
+from random import shuffle, choice
 
-	some_list = [39, 30, 45, 33, 20, 61, 36, 5, 31, 64, 22, 10, 21, 25, 80, 86, 63, 27, 85, 2, 71, 4, 5]
-	```
+some_list = [39, 30, 45, 33, 20, 61, 36, 5, 31, 64, 22, 10, 21, 25, 80, 86, 63, 27, 85, 2, 71, 4, 5]
+```
 
-- Start by creating the three empty lists:
+1. Start by creating the three empty lists:
 
 	```python
 	small = []
@@ -54,7 +54,7 @@ Now you know what the quicksort algorithm is, you can try and code it. You'll ne
 	large = []
 	```
 
-- Once a list only has one item, it is sorted. This is our *base case*, so you need to identify lists with more than one item:
+1. Once a list only has one item, it is sorted. This is our *base case*, so you need to identify lists with more than one item:
 
 	```python
 	small = []
@@ -63,7 +63,7 @@ Now you know what the quicksort algorithm is, you can try and code it. You'll ne
 	if len(some_list) > 1:
 	```
 
-- Next, you choose a pivot. For now, it doesn't matter which item you choose as a pivot, so it may as well be random:
+1. Next, you choose a pivot. For now, it doesn't matter which item you choose as a pivot, so it may as well be random:
 
 	```python
 	small = []
@@ -73,7 +73,7 @@ Now you know what the quicksort algorithm is, you can try and code it. You'll ne
 		pivot = choice(some_list)
 	```
 
-- If an item is smaller than the pivot, it goes in the `small` list. If it's larger than the pivot, it goes in the `large` list. Otherwise, it can go in the `medium` list:
+1. If an item is smaller than the pivot, it goes in the `small` list. If it's larger than the pivot, it goes in the `large` list. Otherwise, it can go in the `medium` list:
 
 	```python
 	small = []
@@ -90,11 +90,11 @@ Now you know what the quicksort algorithm is, you can try and code it. You'll ne
 					medium.append(i)
 	```
 
-- You can now check that your code is working. Save and run it, then use the interpreter to have a look at the contents of `small`, `medium`, and `large`.
+1. You can now check that your code is working. Save and run it, then use the interpreter to have a look at the contents of `small`, `medium`, and `large`.
 
 ## Making a recursive function
 
-- Now that the main list has been divided, you need to run `small` and `large` back through the algorithm. To do this you'll need to turn it into a function:
+1. Now that the main list has been divided, you need to run `small` and `large` back through the algorithm. To do this you'll need to turn it into a function:
 
 	```python
 	def my_quicksort(some_list):
@@ -112,7 +112,7 @@ Now you know what the quicksort algorithm is, you can try and code it. You'll ne
 						medium.append(i)
 	```
 
-- The `small` and `large` lists can be recursed back through the algorithm in the `return`:
+1. The `small` and `large` lists can be recursed back through the algorithm in the `return`:
 
 	```python
 	def my_quicksort(some_list):
@@ -131,7 +131,7 @@ Now you know what the quicksort algorithm is, you can try and code it. You'll ne
 			return my_quicksort(small) + medium + my_quicksort(large)
 	```				
 
-- Finally, you need to handle the *base case* and return lists with only one item:
+1. Finally, you need to handle the *base case* and return lists with only one item:
 
 	```python
 	def my_quicksort(some_list):
@@ -151,13 +151,13 @@ Now you know what the quicksort algorithm is, you can try and code it. You'll ne
 		return some_list			
 	```
 
-- Try your new recursive quicksort function by calling it:
+1. Try your new recursive quicksort function by calling it:
 
 	```python
 	print(my_quicksort(some_list))
 	```
 
-- Or try it with a larger list:
+1. Or try it with a larger list:
 
 	```python
 	print(my_quicksort(create_random_list(100)))

@@ -2,15 +2,15 @@
 
 The bubble sort algorithm sorts an unordered list by repeatedly stepping through the list and swapping items if they are in the wrong order. With a small list such as:
 
-	`[4,3,6,1]`
+`[4,3,6,1]`
 
 the algorithm would begin by comparing the first two items: `4` and `3`. As they are in the wrong order, they would be swapped to give:
 
-	`[3,4,6,1]`
+`[3,4,6,1]`
 
 Next, `4` and `6` would be compared. These are in the correct order so are left alone. Then, `6` and `1` would be compared and swapped to give:
 
-	`[3,4,1,6]`
+`[3,4,1,6]`
 
 As you can see, the list is not yet sorted, so the algorithm now goes back to the start, comparing pairs of numbers and *bubbling* the higher numbers upwards until they are in the correct place.
 
@@ -38,14 +38,14 @@ The first of these functions creates a list of random numbers; the second functi
 
 ## Swapping variables
 
-Integral to the bubble sort algorithm is the ability to swap items around in a list. Start by thinking about two variables, each with different values. Type the following into a Python interpreter:
+1. Integral to the bubble sort algorithm is the ability to swap items around in a list. Start by thinking about two variables, each with different values. Type the following into a Python interpreter:
 
 	```python
 	foo = 'first'
 	bar = 'second'
 	```
 
-How could these be easily swapped around, so that `foo` is equal to `'second'` and `bar` is equal to `'first'`? The first way of achieving this is to use a *hold* variable. Try the following in the interpreter:
+1. How could these be easily swapped around, so that `foo` is equal to `'second'` and `bar` is equal to `'first'`? The first way of achieving this is to use a *hold* variable. Try the following in the interpreter:
 
 	```python
 	hold = foo
@@ -53,32 +53,32 @@ How could these be easily swapped around, so that `foo` is equal to `'second'` a
 	bar = hold
 	```
 
-Now type `foo` and `bar` into the interpreter, and you should see that their values have been swapped!
+1. Now type `foo` and `bar` into the interpreter, and you should see that their values have been swapped!
 
-In Python there is an easier way of swapping variables around, though. Start again by reassigning `foo` and `bar`:
+1. In Python there is an easier way of swapping variables around, though. Start again by reassigning `foo` and `bar`:
 
 	```python
 	foo = 'first'
 	bar = 'second'
 	```
 
-Now to swap them around, you only need a single line:
+1. Now to swap them around, you only need a single line:
 
 	```python
 	foo, bar = bar, foo
 	```
 
-Check the values of `foo` and `bar` in the interpreter now, and you should see that they have swapped.
+1. Check the values of `foo` and `bar` in the interpreter now, and you should see that they have swapped.
 
 ## Swapping items in a list
 
-The same process can be used to swap items in a list. Type the following at the bottom of your `sorting.py` file.
+1. The same process can be used to swap items in a list. Type the following at the bottom of your `sorting.py` file.
 
 	```python
 	some_list=[3,2,1]
 	```
 
-To get this list in order, you need to swap some items around:
+1. To get this list in order, you need to swap some items around:
 
     ```python
 	some_list = [3,2,1]
@@ -88,7 +88,7 @@ To get this list in order, you need to swap some items around:
 	print(some_list)
 	```
 
-You can visualise the whole process by using the display() function:
+1. You can visualise the whole process by using the display() function:
 
 	```python
 	some_list = [3,2,1]
@@ -101,21 +101,21 @@ You can visualise the whole process by using the display() function:
 	display(some_list)
 	```
 	
-If it's a little too fast to see, try adding a `sleep(1)` between each swap, but you'll have to add `from time import sleep` to the top of your file.
+1. If it's a little too fast to see, try adding a `sleep(1)` between each swap, but you'll have to add `from time import sleep` to the top of your file.
 	
-Using this method, try and sort the following list and visualise it happening:
+1. Using this method, try and sort the following list and visualise it happening:
 
   ```python
   [2,1,5,3,]
   ```
   
-Once you are done, you can delete or *comment* out the code.
+1. Once you are done, you can delete or *comment* out the code.
 
 ## Swapping in a loop
 
 You need to automate the comparison of the list items and their swapping. To begin with, you can implement a single pass through the list, swapping pairs of items if they are in the wrong order.
 
-Comparing items in a list is fairly easy. Try the following in the interpreter:
+1. Comparing items in a list is fairly easy. Try the following in the interpreter:
 
 	```python
 	i = 0
@@ -123,7 +123,7 @@ Comparing items in a list is fairly easy. Try the following in the interpreter:
 	some_list[i] > some_list[i+1]
 	```
 
-This should evaluate to `True` because the the 0th item of the list is larger than the first. We can reset `i` and try it again:
+1. This should evaluate to `True` because the the 0th item of the list is larger than the first. We can reset `i` and try it again:
 
 	```python
 	i = 1
@@ -132,7 +132,7 @@ This should evaluate to `True` because the the 0th item of the list is larger th
 
 This should evaluate to `False`, as the 1st item of the list is not larger than the second.
 
-You can try this inside a `for` loop so that every pair of items in the list is considered. Add the following lines to your **sorting.py** file. To start with, you can just compare each item with the next:
+1. You can try this inside a `for` loop so that every pair of items in the list is considered. Add the following lines to your **sorting.py** file. To start with, you can just compare each item with the next:
 
 	```python
 	some_list = [6,2,5,1,7,4,9,3]
@@ -141,9 +141,9 @@ You can try this inside a `for` loop so that every pair of items in the list is 
 			print(some_list[i],'is greater than',some_list[i+1]
 	```
 
-Run your code to see what happens. Can you explain why you only use one less than the length of the list (`len(some_list)-1`)? What would happen if the `for` loop read `for i in range(len(some_list))`? Try it and see.
+1. Run your code to see what happens. Can you explain why you only use one less than the length of the list (`len(some_list)-1`)? What would happen if the `for` loop read `for i in range(len(some_list))`? Try it and see.
 
-At the moment, the loop just compares the items in the list and tells us if one is bigger than another, but you need it to swap the items too. You can also have a look at what's going on by using the `display()` function:
+1. At the moment, the loop just compares the items in the list and tells us if one is bigger than another, but you need it to swap the items too. You can also have a look at what's going on by using the `display()` function:
 
 	```python
 	some_list = [6,2,5,1,7,4,9,3]
@@ -153,9 +153,9 @@ At the moment, the loop just compares the items in the list and tells us if one 
 			display(some_list)
 	```
 
-Run this code to see the items being swapped. If you need to slow it down, use a `sleep()` function right after the `display()` call.
+1. Run this code to see the items being swapped. If you need to slow it down, use a `sleep()` function right after the `display()` call.
 
-You can try running this on an even longer list, by using the `create_random_list()` function:
+1. You can try running this on an even longer list, by using the `create_random_list()` function:
 
 	```python
 	some_list = create_random_list(100)
@@ -170,7 +170,7 @@ You should see a column moving from left to right. If it meets a column that is 
 
 ## Sorting the list
 
-Obviously, your list isn't sorted yet. The whole process needs to be repeated multiple times. To do this, you can place the whole loop inside a `while` loop:
+1. Obviously, your list isn't sorted yet. The whole process needs to be repeated multiple times. To do this, you can place the whole loop inside a `while` loop:
 
 	```python
 	some_list = create_random_list(10)
@@ -181,7 +181,7 @@ Obviously, your list isn't sorted yet. The whole process needs to be repeated mu
 				display(some_list)
 	```
 
-This sorts the list, but the program never ends. The question is, how can you tell if the list is sorted? The key to the problem is to see if an item in the list has been swapped during a pass. If any item has been swapped in a pass through the list, we can assume the list is not yet sorted. If in any single pass no items are swapped, then the list must therefore be sorted.
+1. This sorts the list, but the program never ends. The question is, how can you tell if the list is sorted? The key to the problem is to see if an item in the list has been swapped during a pass. If any item has been swapped in a pass through the list, we can assume the list is not yet sorted. If in any single pass no items are swapped, then the list must therefore be sorted.
 
     ```python
     some_list = create_random_list(10)
@@ -195,7 +195,7 @@ This sorts the list, but the program never ends. The question is, how can you te
                 swapped = True
 ```
 
-To finish off, you just need to wrap your sorting algorithm in a function:
+1. To finish off, you just need to wrap your sorting algorithm in a function:
 
 	```python
 	def my_bubble_sort(some_list):
@@ -210,13 +210,13 @@ To finish off, you just need to wrap your sorting algorithm in a function:
 		return some_list
 	```
 
-You can call the function using the line:
+1. You can call the function using the line:
 
 	```python
 	my_bubble_sort(create_random_list(20))
 	```
 
-You might find that this is a little slow, especially if you increase the number of items in the list. By taking the `display()` function call out of the `for` loop, you can speed up the visualisation:
+1. You might find that this is a little slow, especially if you increase the number of items in the list. By taking the `display()` function call out of the `for` loop, you can speed up the visualisation:
 
 	```python
 	def my_bubble_sort(some_list):
@@ -234,4 +234,4 @@ You might find that this is a little slow, especially if you increase the number
 	my_bubble_sort(create_random_list(100))
 	```
 
-Try changing the bar chart to a scatter chart to see a clearer visualisation.
+1. Try changing the bar chart to a scatter chart to see a clearer visualisation.
