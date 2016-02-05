@@ -20,13 +20,6 @@ def my_quicksort(some_list, start, stop, depth = 0):
         return some_list
     else:
         pivot = some_list[start]
-        # middle = (stop - start) // 2
-        # if some_list[start] > some_list[middle] > some_list[stop]:
-        #     pivot = some_list[middle]
-        # elif some_list[start] > some_list[stop] > some_list[middle]:
-        #     pivot = some_list[stop]
-        # else:
-        #     pivot = some_list[start]
         left = start
         right = stop
         while left <= right:
@@ -38,14 +31,14 @@ def my_quicksort(some_list, start, stop, depth = 0):
                 some_list[left], some_list[right] = some_list[right], some_list[left]
                 left += 1
                 right -= 1
-#                display(some_list)
+        display(some_list)
 
         my_quicksort(some_list, start, right, depth = depth +1)
         my_quicksort(some_list, left, stop, depth = depth + 1)
 
 
 
-a = create_random_list(200)
+a = create_random_list(1000)
 my_quicksort(a, 0, len(a) - 1)
 print('Done')
 
