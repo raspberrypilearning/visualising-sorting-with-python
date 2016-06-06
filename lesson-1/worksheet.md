@@ -89,7 +89,7 @@ Try using list comprehensions to create the following lists:
 
 	```python
 	plt.scatter(x,y)
-	plt.draw()
+	plt.show()
 	```
 
 1. Your entire file should now look like this:
@@ -102,23 +102,25 @@ Try using list comprehensions to create the following lists:
 
 
 	plt.scatter(x,y)
-	plt.draw()
+	plt.show()
 	```
 
 1. A window should appear containing your graph:
 
 	![figure_1](images/figure_1.png)
 
-1. Close the window. You can now try drawing some different styles of graph. Alter this line:
+1. Close the window. You can now try drawing some different styles of graph. Alter these lines:
 
 	```python
 	plt.scatter(x,y)
+	plt.show()
 	```
 
 so that it reads:
 
 ```python
 plt.plot(x,y)
+plt.show()
 ```
 
 then run your code again.
@@ -130,6 +132,7 @@ then run your code again.
 	```python
 	plt.plot(x,y)
 	plt.scatter(x,y)
+	plt.show()
 	```
 
 	![figure_2](images/figure_2.png)
