@@ -44,15 +44,15 @@ Have a go at making the following lists using list comprehensions:
 
 You can use the full range of parameters available in the `range()` function in a list comprehension, so if you wanted to start at a different value to produce `[5,6,7,8,9]`, for instance, you could write the following:
 
-	```python
-	numbers = [i for i in range(5,10)
-	```
+```python
+numbers = [i for i in range(5,10)
+```
 
 Try using list comprehensions to create the following lists:
 
 1. [10,11,12,13,14,15,16,17,18,19]
 
-1. [-5,-6,-7,-8,-9,0]
+1. [-10, -9, -8, -7, -6, -5]
 
 You can also pass a step value into the `range()` function to get lists that skip numbers, such as `[0,2,4,5,8]`:
 
