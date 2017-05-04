@@ -174,15 +174,15 @@ To finish off this section, you're going to learn how to plot an interactive gra
 
 1. You're going to use a loop to update the graph and keep shuffling the `y` list around so that the values keep changing. You'll also need to clear the plot each time. The comments in the code below explain each line:
 
-   ```python
-   for i in range(50):       ## Do the following 50 times
-	   plt.clf()             ## Clear the plot
-	   plt.bar(x,y)          ## Plot a bar chart
-	   plt.draw()            ## Draw the bar chart
-	   sleep(0.5)            ## Pause for 1/2 a second
-	   shuffle(y)            ## Shuffle the data
+	```python
+	for i in range(50):		 ## Do the following 50 times
+		plt.clf()			 ## Clear the plot
+		plt.bar(x,y)			 ## Plot a bar chart
+		plt.draw()			 ## Draw the bar chart
+		sleep(0.5)			 ## Pause for 1/2 a second
+		shuffle(y)			 ## Shuffle the data
 
-   ```
+	```
 
 1. Run your code to see the live plot. If it gives an error, check it's the same as the code below:
 

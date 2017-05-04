@@ -48,13 +48,13 @@ Depending on the exam board you are using, you might want to change this lesson 
 - One possible solution would be to do the following when the pivot is chosen:
 
 ```python
-        middle = (stop - start) // 2
-        if some_list[start] > some_list[middle] > some_list[stop]:
-            pivot = some_list[middle]
-        elif some_list[start] > some_list[stop] > some_list[middle]:
-            pivot = some_list[stop]
-        else:
-            pivot = some_list[start]
+		middle = (stop - start) // 2
+		if some_list[start] > some_list[middle] > some_list[stop]:
+			pivot = some_list[middle]
+		elif some_list[start] > some_list[stop] > some_list[middle]:
+			pivot = some_list[stop]
+		else:
+			pivot = some_list[start]
 ```
 
 

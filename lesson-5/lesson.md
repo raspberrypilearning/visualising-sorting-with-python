@@ -42,16 +42,16 @@ t.bk(300)
 t.pd()
 
 def tree(length,t):
-    if length < 5:
-        return None
-    else:
-        t.forward(length)
-        t.right(60)
-        tree(length-30,t)
-        t.left(120)
-        tree(length-30,t)
-        t.right(60)
-        t.backward(length)
+	if length < 5:
+		return None
+	else:
+		t.forward(length)
+		t.right(60)
+		tree(length-30,t)
+		t.left(120)
+		tree(length-30,t)
+		t.right(60)
+		t.backward(length)
 
 tree(180,t)
 ```
@@ -71,23 +71,23 @@ tree(180,t)
 
 ```python
 def gcd(a,b):
-    if a % b == 0:
-        return b
-    else:
-        return gcd(b, a % b)
+	if a % b == 0:
+		return b
+	else:
+		return gcd(b, a % b)
 
 # Function using list comprehensions
 def coprimes(c):
-    values = [i for i in range(1,c) if gcd(c,i) == 1]
-    return values
+	values = [i for i in range(1,c) if gcd(c,i) == 1]
+	return values
 
 # Function without list comprehensions
 def coprimes(c):
-    values = []
-    for i in range(1,c):
-        if gcd(c,i) == 1:
-            values.append(i)
-    return values
+	values = []
+	for i in range(1,c):
+		if gcd(c,i) == 1:
+			values.append(i)
+	return values
 
 
 results = coprimes(63)
@@ -97,15 +97,15 @@ results = coprimes(63)
 
 ```python
 def find_palindrome(word):
-    if len(word) <= 1:
-        return True
-    elif word[0] == word[-1]:
-        return find_palindrome(word[1:-1])
-    else:
-        return False
+	if len(word) <= 1:
+		return True
+	elif word[0] == word[-1]:
+		return find_palindrome(word[1:-1])
+	else:
+		return False
 
 if find_palindrome('abcdefedcba'):
-    print('Yep')
+	print('Yep')
 
 ```
 
@@ -114,11 +114,11 @@ if find_palindrome('abcdefedcba'):
 ```python
 def fib(n):
    if n == 1:
-      return 1
-   elif n == 0:   
-      return 0            
-   else:                      
-      return fib(n-1) + fib(n-2)
+	  return 1
+   elif n == 0:
+	  return 0
+   else:
+	  return fib(n-1) + fib(n-2)
 
 print(fib(20))
 ```
@@ -137,16 +137,16 @@ t.bk(300)
 t.pd()
 
 def tree(length,t):
-    if length < 5:
-        return None
-    else:
-        t.forward(length)
-        t.right(60)
-        tree(length-30,t)
-        t.left(120)
-        tree(length-30,t)
-        t.right(60)
-        t.backward(length)
+	if length < 5:
+		return None
+	else:
+		t.forward(length)
+		t.right(60)
+		tree(length-30,t)
+		t.left(120)
+		tree(length-30,t)
+		t.right(60)
+		t.backward(length)
 
 tree(180,t)
 ```

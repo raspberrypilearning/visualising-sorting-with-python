@@ -6,19 +6,19 @@ The selection sort algorithm steps through an unordered list, keeping track of t
 
 With a small list such as:
 
-    `[4,3,6,2]`
+	[4,3,6,2]
 
 the first value `4` is assumed to be the smallest value. The next item in the list `3` is looked at and as this is smaller than `4`, it becomes the smallest value. Next, `6` is looked at. It's larger than `3`, so `3` remains the smallest value. Finally, for this iteration the value `2` is looked at. As it's smaller than `3` it now becomes the smallest value. As the algorithm has reached the end of the list, `2` is swapped with `4`:
 
-    `[2,3,6,4]`
+	[2,3,6,4]
 
 Next, the algorithm makes `3` the smallest value. This is compared to `6` and then `4` but as it's always smaller, it's left alone:
 
-    `[2,3,6,4]'
+	[2,3,6,4]
 
 Lastly, `6` is made the smallest value. It's compared with `4`, which is smaller, so `4` becomes the smallest value. As the algorithm has reached the end of the list, `6` and `4` are swapped:
 
-    `[2,3,4,6]`
+	[2,3,4,6]
 
 The list is now sorted.
 
@@ -102,8 +102,8 @@ The list is now sorted.
 			smallest_value = j
 
 	some_list[smallest_value], some_list[i] = some_list[i], some_list[smallest_value]
-	sleep(1)	
-	display(some_list)	
+	sleep(1)
+	display(some_list)
 	```
 
 ## Running through the entire list
@@ -121,7 +121,7 @@ for i in range(len(some_list)):
 			smallest_value = j
 
 	some_list[smallest_value], some_list[i] = some_list[i], some_list[smallest_value]
-	sleep(1)	
+	sleep(1)
 	display(some_list)
 ```
 
@@ -139,7 +139,7 @@ for i in range(len(some_list)):
 					smallest_value = j
 
 			some_list[smallest_value], some_list[i] = some_list[i], some_list[smallest_value]
-			display(some_list)	
+			display(some_list)
 
 		return some_list
 
@@ -161,4 +161,3 @@ for i in range(len(some_list)):
 		plt.scatter(range(len(some_list)),some_list)
 		plt.draw()
 	```
-

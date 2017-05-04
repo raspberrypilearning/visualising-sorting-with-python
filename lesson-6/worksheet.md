@@ -52,7 +52,7 @@ To begin with, you want to create an algorithm that chooses a pivot and moves it
 	```python
 	def my_quicksort(some_list, start, stop):
 	```
-	
+
 1. You can define the *base case* first. If the difference between the starting and ending position is less than 1 (i.e. you're trying to sort a section of a list that contains less than one item), the function should stop:
 
 	```python

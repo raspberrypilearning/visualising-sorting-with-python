@@ -2,15 +2,15 @@
 
 The bubble sort algorithm sorts an unordered list by repeatedly stepping through the list and swapping items if they are in the wrong order. With a small list such as:
 
-`[4,3,6,1]`
+	[4,3,6,1]
 
 the algorithm would begin by comparing the first two items: `4` and `3`. As they are in the wrong order, they would be swapped to give:
 
-`[3,4,6,1]`
+	[3,4,6,1]
 
 Next, `4` and `6` would be compared. These are in the correct order so are left alone. Then, `6` and `1` would be compared and swapped to give:
 
-`[3,4,1,6]`
+	[3,4,1,6]
 
 As you can see, the list is not yet sorted, so the algorithm now goes back to the start, comparing pairs of numbers and *bubbling* the higher numbers upwards until they are in the correct place.
 
@@ -23,15 +23,14 @@ from random import shuffle
 plt.ion()
 
 def create_random_list(length):
-    some_list = [i for i in range(length)]
-    shuffle(some_list)
+	some_list = [i for i in range(length)]
+	shuffle(some_list)
 	return some_list
 
 def display(some_list):
-    plt.clf()
-    plt.bar(range(len(some_list)),some_list)
-    plt.draw()
-    
+	plt.clf()
+	plt.bar(range(len(some_list)),some_list)
+	plt.draw()
 ```
 
 The first of these functions creates a list of random numbers; the second function displays the contents of a list as a bar chart. Copy the code into a new file called `sorting.py`.
@@ -80,7 +79,7 @@ The first of these functions creates a list of random numbers; the second functi
 
 1. To get this list in order, you need to swap some items around:
 
-    ```python
+	```python
 	some_list = [3,2,1]
 	some_list[0], some_list[1] = some_list[1], some_list[0]
 	some_list[1], some_list[2] = some_list[2], some_list[1]
@@ -100,15 +99,15 @@ The first of these functions creates a list of random numbers; the second functi
 	some_list[0], some_list[1] = some_list[1], some_list[0]
 	display(some_list)
 	```
-	
+
 1. If it's a little too fast to see, try adding a `sleep(1)` between each swap, but you'll have to add `from time import sleep` to the top of your file.
-	
+
 1. Using this method, try and sort the following list and visualise it happening:
 
   ```python
   [2,1,5,3,]
   ```
-  
+
 1. Once you are done, you can delete or *comment* out the code.
 
 ## Swapping in a loop
@@ -183,16 +182,16 @@ You should see a column moving from left to right. If it meets a column that is 
 
 1. This sorts the list, but the program never ends. The question is, how can you tell if the list is sorted? The key to the problem is to see if an item in the list has been swapped during a pass. If any item has been swapped in a pass through the list, we can assume the list is not yet sorted. If in any single pass no items are swapped, then the list must therefore be sorted.
 
-    ```python
-    some_list = create_random_list(10)
-    swapped = True
-    while swapped:
-        swapped = False
-        for i in range(len(some_list)-1):
-            if some_list[i] > some_list[i + 1]:
-                some_list[i],some_list[i+1] = some_list[i + 1],some_list[i]
-                display(some_list)
-                swapped = True
+	```python
+	some_list = create_random_list(10)
+	swapped = True
+	while swapped:
+		swapped = False
+		for i in range(len(some_list)-1):
+			if some_list[i] > some_list[i + 1]:
+				some_list[i],some_list[i+1] = some_list[i + 1],some_list[i]
+				display(some_list)
+				swapped = True
 ```
 
 1. To finish off, you just need to wrap your sorting algorithm in a function:

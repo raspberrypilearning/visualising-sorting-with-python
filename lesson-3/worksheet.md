@@ -4,22 +4,23 @@ The insertion sort algorithm sorts an unordered list by stepping through the lis
 
 With a small list such as:
 
-    `[4,3,6,2]`
+	[4,3,6,2]
 
 the first value `4` is ignored. The next value `3` is looked at and compared to the first value `4`. As `4` is larger than `3`, they are swapped:
 
-    `[3,4,6,2]`
+	[3,4,6,2]
 
 Next, `6` is looked at. It's larger than 4 so it's left in place. Finally, `2` is looked at. As `6` is larger, the two numbers are swapped:
 
-    `[3,4,2,6]`
+	[3,4,2,6]
 
 `2` is also smaller than `4`, so again, they are swapped:
-    `[3,2,4,6]`
+
+	[3,2,4,6]
 
 Finally, `3` is larger than `2` so again, they are swapped:
 
-	`[2,3,4,6]`
+	[2,3,4,6]
 
 ## Starting off
 
@@ -57,9 +58,8 @@ Finally, `3` is larger than `2` so again, they are swapped:
 	```
 
 1. Next, `i` needs to be reduced by 1 each time:
-	
-	```python
 
+	```python
 	some_list = [4,1,3,2]
 
 	i = 3
@@ -176,4 +176,3 @@ Finally, `3` is larger than `2` so again, they are swapped:
 
 	my_insertion_sort(create_random_list(100))
 	```
-

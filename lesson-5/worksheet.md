@@ -11,13 +11,13 @@ Another way of rephrasing the problem 'find the factorial of 10' is to say 'find
 1. You can write this in code as follows:
 
 	```python
-	def factorial(n):			            # Find the factorial of a number n
-		if n == 1:				            # Base case - if the number is 1    
-			return 1                        # Factorial of 1 is one, so return it
-		else:                               # If the number is greater than 1
-			return n * factorial(n-1)       # Multiply the number by the factorial of the next number down
+	def factorial(n):						# Find the factorial of a number n
+		if n == 1:							# Base case - if the number is 1
+			return 1						# Factorial of 1 is one, so return it
+		else:								# If the number is greater than 1
+			return n * factorial(n-1)		# Multiply the number by the factorial of the next number down
 
-	print(factorial(10))                    # Find and print the factorial of 10
+	print(factorial(10))					# Find and print the factorial of 10
 	```
 
 1. Run the code and you should see the answer displayed.
@@ -110,7 +110,7 @@ And here's some helpful code that you might need:
 ```python
 'my string'[0] # the first character of the string
 'my string'[-1] # the last character of the string
-'my string'[1:-1] # the string with the first and last characters removed 
+'my string'[1:-1] # the string with the first and last characters removed
 ```
 
 ## The Fibonacci sequence
@@ -134,4 +134,3 @@ The 20th Fibonacci number is 6765
 ```
 
 Be warned: recursive solutions aren't always the best solutions. Trying too large a number with this algorithm may well take a significant amount of time.
-
